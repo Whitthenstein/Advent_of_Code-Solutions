@@ -1,5 +1,7 @@
-# puzzle input for the challenge
-puzzle = ""
+from setup import getPuzzleInput
+
+puzzleInput = getPuzzleInput("Day_1.txt")
+puzzle = puzzleInput[0]
 
 def getValue(v: str):
     if v == '(':

@@ -1,10 +1,7 @@
-# puzzle input for the challenge
-puzzle = ""
+from setup import getPuzzleInput
 
-def getDimensionsStrings(string: str):
-    dimensions = string.splitlines()
-    dimensions.remove('')
-    return dimensions
+puzzleInput = getPuzzleInput("Day_2.txt")
+puzzle = puzzleInput
 
 def getSquareFeet(l: int, w: int, h: int):
     area1 = l*w
@@ -17,19 +14,17 @@ def getFeetOfRibbon(l: int, w: int, h: int):
     feetOfRibbon = 2*l + 2*w + 2*h - 2*maxToCut
     return feetOfRibbon + l*w*h
 
-def getSquareFeetTotal(pzl: str):
+def getSquareFeetTotal(pzl: list):
     total = 0
-    dimensions = getDimensionsStrings(pzl)
-    for element in dimensions:
+    for element in pzl:
         dims = element.split('x')
         total += getSquareFeet(int(dims[0]), int(dims[1]), int(dims[2]))
 
     return total
 
-def getFeetRibbonTotal(pzl: str):
+def getFeetRibbonTotal(pzl: list):
     total = 0
-    dimensions = getDimensionsStrings(pzl)
-    for element in dimensions:
+    for element in pzl:
         dims = element.split('x')
         total += getFeetOfRibbon(int(dims[0]), int(dims[1]), int(dims[2]))
 
