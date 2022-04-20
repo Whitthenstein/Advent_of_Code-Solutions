@@ -59,7 +59,6 @@ def howManyLights(puzzle: list):
     
     return countLights()
 
-
 # Part - Two
 def turnOn2(x: int, y: int):
     matrix[x][y] += 1
@@ -99,8 +98,6 @@ def howManyLights2(puzzle: list):
         handleLightInstruction2(el)
     
     return countLights()
-
-
 
 # Script runs here
 print("Advent of Code - 2015: Day Six")
