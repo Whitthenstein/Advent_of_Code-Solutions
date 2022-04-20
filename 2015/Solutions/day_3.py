@@ -1,4 +1,4 @@
-from setup import getPuzzleInput
+from setup_solutions import getPuzzleInput
 
 puzzleInput = getPuzzleInput("Day_3.txt")
 puzzle = puzzleInput[0]

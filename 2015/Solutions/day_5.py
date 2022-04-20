@@ -1,6 +1,4 @@
-from ast import Set
 from setup_solutions import getPuzzleInput
-import hashlib
 
 puzzleInput = getPuzzleInput("Day_5.txt")
 puzzle = puzzleInput
