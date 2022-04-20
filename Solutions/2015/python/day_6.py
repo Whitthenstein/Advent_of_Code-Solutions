@@ -1,7 +1,7 @@
 from setup_solutions import getPuzzleInput
 import numpy as np
 
-puzzleInput = getPuzzleInput("Day_6.txt")
+puzzleInput = getPuzzleInput("2015", "Day_6.txt")
 puzzle = puzzleInput
 
 #matrix

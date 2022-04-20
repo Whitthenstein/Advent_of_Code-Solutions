@@ -1,7 +1,7 @@
 from setup_solutions import getPuzzleInput
 import hashlib
 
-puzzleInput = getPuzzleInput("Day_4.txt")
+puzzleInput = getPuzzleInput("2015", "Day_4.txt")
 puzzle = puzzleInput[0]
 
 numZeroes = 5

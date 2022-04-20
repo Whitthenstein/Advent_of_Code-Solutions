@@ -1,6 +1,6 @@
 from setup_solutions import getPuzzleInput
 
-puzzleInput = getPuzzleInput("Day_5.txt")
+puzzleInput = getPuzzleInput("2015", "Day_5.txt")
 puzzle = puzzleInput
 
 # Part - One

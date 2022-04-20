@@ -1,6 +1,6 @@
 from setup_solutions import getPuzzleInput
 
-puzzleInput = getPuzzleInput("Day_3.txt")
+puzzleInput = getPuzzleInput("2015", "Day_3.txt")
 puzzle = puzzleInput[0]
 
 def getTupleCoordinate(s: str):

@@ -1,6 +1,6 @@
 from setup_solutions import getPuzzleInput
 
-puzzleInput = getPuzzleInput("Day_1.txt")
+puzzleInput = getPuzzleInput("2015", "Day_1.txt")
 puzzle = puzzleInput[0]
 
 def getValue(v: str):

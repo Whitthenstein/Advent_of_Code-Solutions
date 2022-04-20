@@ -1,6 +1,6 @@
 from setup_solutions import getPuzzleInput
 
-puzzleInput = getPuzzleInput("Day_2.txt")
+puzzleInput = getPuzzleInput("2015", "Day_2.txt")
 puzzle = puzzleInput
 
 def getSquareFeet(l: int, w: int, h: int):
