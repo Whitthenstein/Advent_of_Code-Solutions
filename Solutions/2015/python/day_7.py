@@ -101,7 +101,7 @@ def buildCircuit2():
     
 
 # Script runs here
-print("Advent of Code - 2015: Day Six")
+print("Advent of Code - 2015: Day Seven")
 print("Part-One Answer:", buildCircuit())
 instructions = []
 results = {}
