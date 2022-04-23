@@ -1,7 +1,9 @@
 from setup_solutions import getPuzzleInput
 import hashlib
 
-puzzleInput = getPuzzleInput("2015", "Day_4.txt")
+year = "2015"
+day = "04"
+puzzleInput = getPuzzleInput(f"{year}", f"Day_{day}.txt")
 puzzle = puzzleInput[0]
 
 numZeroes = 5
@@ -30,6 +32,6 @@ def findNum(s:str, nZeroes: int):
 
 
 # Script runs here
-print("Advent of Code - 2015: Day Four")
+print(f"Advent of Code - {year}: Day {day}")
 print("Part-One Answer:", findNum(puzzle, numZeroes))
 print("Part-Two Answer:", findNum(puzzle, numZeroes+1))

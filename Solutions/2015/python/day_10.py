@@ -1,6 +1,8 @@
 from setup_solutions import getPuzzleInput
 
-puzzleInput = getPuzzleInput("2015", "Day_10.txt")
+year = "2015"
+day = "10"
+puzzleInput = getPuzzleInput(f"{year}", f"Day_{day}.txt")
 puzzle = puzzleInput[0]
 
 def lookAndSay(string: str):
@@ -26,6 +28,6 @@ def playGameNTimes(n: int):
     return len(string)
 
 # Script runs here
-print("Advent of Code - 2015: Day Ten")
+print(f"Advent of Code - {year}: Day {day}")
 print("Part-One Answer:", playGameNTimes(40))
 print("Part-Two Answer:", playGameNTimes(50))

@@ -1,6 +1,8 @@
 from setup_solutions import getPuzzleInput
 
-puzzleInput = getPuzzleInput("2015", "Day_11.txt")
+year = "2015"
+day = "11"
+puzzleInput = getPuzzleInput(f"{year}", f"Day_{day}.txt")
 puzzle = puzzleInput[0]
 
 alphabetDict = {"a": 0, "b": 1, "c": 2, "d": 3, "e": 4, "f": 5,
@@ -77,6 +79,6 @@ def findPassword(password: str):
     return newPassword
 
 # Script runs here
-print("Advent of Code - 2015: Day Eleven")
+print(f"Advent of Code - {year}: Day {day}")
 print("Part-One Answer:", findPassword(puzzle))
 print("Part-Two Answer:", findPassword(incrementPassword(findPassword(puzzle))))

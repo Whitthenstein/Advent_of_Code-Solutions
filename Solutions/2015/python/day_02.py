@@ -1,6 +1,8 @@
 from setup_solutions import getPuzzleInput
 
-puzzleInput = getPuzzleInput("2015", "Day_2.txt")
+year = "2015"
+day = "02"
+puzzleInput = getPuzzleInput(f"{year}", f"Day_{day}.txt")
 puzzle = puzzleInput
 
 def getSquareFeet(l: int, w: int, h: int):
@@ -31,6 +33,6 @@ def getFeetRibbonTotal(pzl: list):
     return total
 
 # Script runs here
-print("Advent of Code - 2015: Day Two")
+print(f"Advent of Code - {year}: Day {day}")
 print("Part-One Answer:", getSquareFeetTotal(puzzle))
 print("Part-Two Answer:", getFeetRibbonTotal(puzzle))

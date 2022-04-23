@@ -1,6 +1,8 @@
 from setup_solutions import getPuzzleInput
 
-puzzleInput = getPuzzleInput("2015", "Day_1.txt")
+year = "2015"
+day = "01"
+puzzleInput = getPuzzleInput(f"{year}", f"Day_{day}.txt")
 puzzle = puzzleInput[0]
 
 def getValue(v: str):
@@ -24,6 +26,6 @@ def getFirstTimeBasement(pzl:str):
 
 
 # Script runs here
-print("Advent of Code - 2015: Day One")
+print(f"Advent of Code - {year}: Day {day}")
 print("Part-One Answer:", getFloor(puzzle))
 print("Part-Two Answer:", getFirstTimeBasement(puzzle))

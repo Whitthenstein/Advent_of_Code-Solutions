@@ -1,8 +1,9 @@
 from setup_solutions import getPuzzleInput
 from itertools import permutations
 
-
-puzzleInput = getPuzzleInput("2015", "Day_9.txt")
+year = "2015"
+day = "09"
+puzzleInput = getPuzzleInput(f"{year}", f"Day_{day}.txt")
 puzzle = puzzleInput
 
 allLocations = set()
@@ -39,7 +40,7 @@ def getLongestDistance():
     return max(calculatedRoutes.values())
 
 # Script runs here
-print("Advent of Code - 2015: Day Nine")
+print(f"Advent of Code - {year}: Day {day}")
 allPossibleRoutes()
 print("Part-One Answer:", getShortestDistance())
 print("Part-Two Answer:", getLongestDistance())

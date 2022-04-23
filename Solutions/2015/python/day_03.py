@@ -1,6 +1,8 @@
 from setup_solutions import getPuzzleInput
 
-puzzleInput = getPuzzleInput("2015", "Day_3.txt")
+year = "2015"
+day = "03"
+puzzleInput = getPuzzleInput(f"{year}", f"Day_{day}.txt")
 puzzle = puzzleInput[0]
 
 def getTupleCoordinate(s: str):
@@ -50,6 +52,6 @@ def getNumberOfHousesRoboAndSanta(pzl: str):
 
 
 # Script runs here
-print("Advent of Code - 2015: Day Three")
+print(f"Advent of Code - {year}: Day {day}")
 print("Part-One Answer:", getNumberOfHouses(puzzle))
 print("Part-Two Answer:", getNumberOfHousesRoboAndSanta(puzzle))

@@ -1,7 +1,9 @@
 from setup_solutions import getPuzzleInput
 import numpy as np
 
-puzzleInput = getPuzzleInput("2015", "Day_6.txt")
+year = "2015"
+day = "06"
+puzzleInput = getPuzzleInput(f"{year}", f"Day_{day}.txt")
 puzzle = puzzleInput
 
 #matrix
@@ -100,7 +102,7 @@ def howManyLights2(puzzle: list):
     return countLights()
 
 # Script runs here
-print("Advent of Code - 2015: Day Six")
+print(f"Advent of Code - {year}: Day {day}")
 print("Part-One Answer:", howManyLights(puzzle))
 
 # reset matrix for part two

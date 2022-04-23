@@ -1,7 +1,9 @@
 from setup_solutions import getPuzzleInput
 import numpy as np
 
-puzzleInput = getPuzzleInput("2015", "Day_7.txt")
+year = "2015"
+day = "07"
+puzzleInput = getPuzzleInput(f"{year}", f"Day_{day}.txt")
 puzzle = puzzleInput
 
 instructions = []
@@ -101,7 +103,7 @@ def buildCircuit2():
     
 
 # Script runs here
-print("Advent of Code - 2015: Day Seven")
+print(f"Advent of Code - {year}: Day {day}")
 print("Part-One Answer:", buildCircuit())
 instructions = []
 results = {}

@@ -1,6 +1,8 @@
 from setup_solutions import getPuzzleInput
 
-puzzleInput = getPuzzleInput("2015", "Day_5.txt")
+year = "2015"
+day = "05"
+puzzleInput = getPuzzleInput(f"{year}", f"Day_{day}.txt")
 puzzle = puzzleInput
 
 # Part - One
@@ -80,6 +82,6 @@ def howManySringsTwo(l: list):
     return totalWords
 
 # Script runs here
-print("Advent of Code - 2015: Day Five")
+print(f"Advent of Code - {year}: Day {day}")
 print("Part-One Answer:", howManySrings(puzzle))
 print("Part-Two Answer:", howManySringsTwo(puzzle))
