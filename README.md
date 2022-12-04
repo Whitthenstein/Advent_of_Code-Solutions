@@ -6,7 +6,7 @@ It is supposed to store all the solutions I'll be making while I'm learning new 
 
 ## Repository Structure
 
-```
+```shell
 Repository
 ├───README.md
 │
@@ -45,6 +45,9 @@ Repository
     │   ...
     ...
 ```
+
 ## Languages Present in this Repository
+
 ![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)
+![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white)
