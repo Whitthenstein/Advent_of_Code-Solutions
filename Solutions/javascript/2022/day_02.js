@@ -62,18 +62,6 @@ const PLAYS_STRAT_TWO = {
     },
 }
 
-const BEATS = {
-    "Rock": "Paper",
-    "Paper": "Scissors",
-    "Scissors": "Rock"
-};
-
-const LOSES = {
-    "Rock": "Scissors",
-    "Paper": "Rock",
-    "Scissors": "Paper"
-};
-
 const getScoreForStrategyOne = (puzzle) => {
     return puzzle.map(el => {
         const [one, two] = el.split(" ");
