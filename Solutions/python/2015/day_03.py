@@ -1,4 +1,7 @@
-from setup_solutions import getPuzzleInput
+import sys, os
+sys.path.append(os.path.abspath(os.path.join(os.path.realpath(os.path.dirname(__file__)), "..", "SetupSolutions")))
+
+from SetupSolutions import getPuzzleInput
 
 year = "2015"
 day = "03"
