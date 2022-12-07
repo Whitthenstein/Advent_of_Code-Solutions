@@ -1,7 +1,10 @@
 # --- Day 11: Corporate Policy ---
+
+## --- Part One ---
+
 Santa's previous password expired, and he needs help choosing a new one.
 
-To help him remember his new password after the old one expires, Santa has devised a method of coming up with a password based on the previous one. Corporate policy dictates that passwords must be exactly eight lowercase letters (for security reasons), so he finds his new password by incrementing his old password string repeatedly until it is valid.
+To help him remember his new password after the old one expires, Santa has devised a method of coming up with a password based on the previous one. Corporate policy dictates that passwords must be exactly eight lowercase letters (for security reasons), so he finds his new password by **incrementing** his old password string repeatedly until it is valid.
 
 Incrementing is just like counting with numbers: `xx`, `xy`, `xz`, `ya`, `yb`, and so on. Increase the rightmost letter one step; if it was `z`, it wraps around to `a`, and repeat with the next letter to the left until one doesn't wrap around.
 
@@ -19,7 +22,8 @@ For example:
 - The next password after `abcdefgh` is `abcdffaa`.
 - The next password after `ghijklmn` is `ghjaabcc`, because you eventually skip all the passwords that start with `ghi`..., since `i` is not allowed.
 
-Given Santa's current password (your puzzle input), what should his next password be?
+Given Santa's current password (your puzzle input), what should his **next password** be?
 
-# --- Part Two ---
+## --- Part Two ---
+
 Santa's password expired again. What's the next one?
