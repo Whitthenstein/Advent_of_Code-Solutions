@@ -9,14 +9,6 @@ day = os.path.basename(__file__).split(".")[0].capitalize()
 puzzleInput = [line.replace("\n", "") for line in getPuzzleInput(f"{year}", f"{day}.txt")]
 puzzle = puzzleInput
 
-sample = [
-    "30373",
-    "25512",
-    "65332",
-    "33549",
-    "35390"
-]
-
 def isVisible(row, col, puzzle):
     treeHeight = int(puzzle[row][col])
     visible = [True, True, True, True]
