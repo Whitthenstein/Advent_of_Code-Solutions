@@ -3,9 +3,9 @@ sys.path.append(os.path.abspath(os.path.join(os.path.realpath(os.path.dirname(__
 
 from SetupSolutions import getPuzzleInput
 
-year = "2022"
-day = "02"
-puzzleInput = getPuzzleInput(f"{year}", f"Day_{day}.txt")
+year = os.path.basename(os.path.dirname(__file__))
+day = os.path.basename(__file__).split(".")[0].capitalize()
+puzzleInput = [line.replace("\n", "") for line in getPuzzleInput(f"{year}", f"{day}.txt")]
 puzzle = puzzleInput
 
 points = {"Rock": 1, "Paper": 2, "Scissors": 3}
@@ -72,6 +72,6 @@ def calculateScoreForSecondStrategy(puzzle):
     return total
 
 # Script runs here
-print(f"Advent of Code - {year}: Day {day}")
+print(f"Advent of Code - {year}: {day.replace('_', ' ')}")
 print("Part-One Answer:", calculateScoreForFirstStrategy(puzzle))
 print("Part-Two Answer:", calculateScoreForSecondStrategy(puzzle))

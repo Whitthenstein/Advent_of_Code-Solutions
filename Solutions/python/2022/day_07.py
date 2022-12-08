@@ -108,7 +108,7 @@ def parseCommandsList(puzzle:list):
     return sum(solutionOneList), solutionTwo
 
 # Script runs here
-print(f"Advent of Code - {year}: Day {day}")
+print(f"Advent of Code - {year}: {day.replace('_', ' ')}")
 partOneSolution, partTwoSolution = parseCommandsList(puzzle)
 print("Part-One Answer:", partOneSolution)
 print("Part-Two Answer:", partTwoSolution)

@@ -3,10 +3,10 @@ sys.path.append(os.path.abspath(os.path.join(os.path.realpath(os.path.dirname(__
 
 from SetupSolutions import getPuzzleInput
 
-year = "2022"
-day = "05"
-puzzleInput = getPuzzleInput(f"{year}", f"Day_{day}.txt")
-puzzle = [line.replace("\n", "") for line in puzzleInput]
+year = os.path.basename(os.path.dirname(__file__))
+day = os.path.basename(__file__).split(".")[0].capitalize()
+puzzleInput = [line.replace("\n", "") for line in getPuzzleInput(f"{year}", f"{day}.txt")]
+puzzle = puzzleInput
 
 def getCratesForWhichStacks(cratesList: list):
     stackNum = 1
@@ -85,6 +85,6 @@ def reArrangeStacksForCrateMover9001(puzzle):
     return "".join(topCrates)
         
 # Script runs here
-print(f"Advent of Code - {year}: Day {day}")
+print(f"Advent of Code - {year}: {day.replace('_', ' ')}")
 print("Part-One Answer:", reArrangeStacksForCrateMover9000(puzzle))
 print("Part-Two Answer:", reArrangeStacksForCrateMover9001(puzzle))
