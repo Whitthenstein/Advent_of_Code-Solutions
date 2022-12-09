@@ -4,9 +4,9 @@ sys.path.append(os.path.abspath(os.path.join(os.path.realpath(os.path.dirname(__
 from SetupSolutions import getPuzzleInput
 from math import floor
 
-year = "2015"
-day = "14"
-puzzleInput = getPuzzleInput(f"{year}", f"Day_{day}.txt")
+year = os.path.basename(os.path.dirname(__file__))
+day = os.path.basename(__file__).split(".")[0].capitalize()
+puzzleInput = [line.replace("\n", "") for line in getPuzzleInput(f"{year}", f"{day}.txt")]
 puzzle = puzzleInput
 
 seconds = 2503
@@ -66,6 +66,6 @@ def getPoints(puzzle: list):
 
 
 # Script runs here
-print(f"Advent of Code - {year}: Day {day}")
+print(f"Advent of Code - {year}: {day.replace('_', ' ')}")
 print("Part-One Answer:", getDistances(puzzle))
 print("Part-One Answer:", getPoints(puzzle))

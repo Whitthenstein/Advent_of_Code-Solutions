@@ -5,9 +5,9 @@ from SetupSolutions import getPuzzleInput
 import numbers
 import json
 
-year = "2015"
-day = "12"
-puzzleInput = getPuzzleInput(f"{year}", f"Day_{day}.txt")
+year = os.path.basename(os.path.dirname(__file__))
+day = os.path.basename(__file__).split(".")[0].capitalize()
+puzzleInput = [line.replace("\n", "") for line in getPuzzleInput(f"{year}", f"{day}.txt")]
 puzzle = puzzleInput[0]
 
 def sumNumbers1(element: object):
@@ -54,7 +54,7 @@ def sumNumbers2(element: object):
 
 
 # Script runs here
-print(f"Advent of Code - {year}: Day {day}")
+print(f"Advent of Code - {year}: {day.replace('_', ' ')}")
 
 # load puzzle JSON
 JSON = json.loads(puzzle)

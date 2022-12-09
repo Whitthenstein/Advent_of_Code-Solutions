@@ -4,9 +4,9 @@ sys.path.append(os.path.abspath(os.path.join(os.path.realpath(os.path.dirname(__
 from SetupSolutions import getPuzzleInput
 from itertools import permutations
 
-year = "2015"
-day = "13"
-puzzleInput = getPuzzleInput(f"{year}", f"Day_{day}.txt")
+year = os.path.basename(os.path.dirname(__file__))
+day = os.path.basename(__file__).split(".")[0].capitalize()
+puzzleInput = [line.replace("\n", "") for line in getPuzzleInput(f"{year}", f"{day}.txt")]
 puzzle = puzzleInput
 
 arrangements = {}
@@ -67,6 +67,6 @@ def makeArrangements2():
     return getMaxPointsFromPermutations()
 
 # Script runs here
-print(f"Advent of Code - {year}: Day {day}")
+print(f"Advent of Code - {year}: {day.replace('_', ' ')}")
 print("Part-One Answer:", makeArrangements(puzzle))
 print("Part-One Answer:", makeArrangements2())

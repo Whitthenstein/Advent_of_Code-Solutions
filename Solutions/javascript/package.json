@@ -1,7 +1,7 @@
 {
   "name": "javascript",
   "version": "1.0.0",
-  "description": "",
-  "author": "",
+  "description": "Javascript solutions for Advent of Code.",
+  "author": "Whitthenstein",
   "license": "ISC"
 }

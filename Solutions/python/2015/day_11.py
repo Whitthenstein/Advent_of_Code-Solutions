@@ -3,9 +3,9 @@ sys.path.append(os.path.abspath(os.path.join(os.path.realpath(os.path.dirname(__
 
 from SetupSolutions import getPuzzleInput
 
-year = "2015"
-day = "11"
-puzzleInput = getPuzzleInput(f"{year}", f"Day_{day}.txt")
+year = os.path.basename(os.path.dirname(__file__))
+day = os.path.basename(__file__).split(".")[0].capitalize()
+puzzleInput = [line.replace("\n", "") for line in getPuzzleInput(f"{year}", f"{day}.txt")]
 puzzle = puzzleInput[0]
 
 alphabetDict = {"a": 0, "b": 1, "c": 2, "d": 3, "e": 4, "f": 5,
@@ -82,6 +82,6 @@ def findPassword(password: str):
     return newPassword
 
 # Script runs here
-print(f"Advent of Code - {year}: Day {day}")
+print(f"Advent of Code - {year}: {day.replace('_', ' ')}")
 print("Part-One Answer:", findPassword(puzzle))
 print("Part-Two Answer:", findPassword(incrementPassword(findPassword(puzzle))))
