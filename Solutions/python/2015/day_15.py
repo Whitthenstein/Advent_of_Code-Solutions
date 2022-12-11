@@ -9,11 +9,6 @@ day = os.path.basename(__file__).split(".")[0].capitalize()
 puzzleInput = [line.replace("\n", "") for line in getPuzzleInput(f"{year}", f"{day}.txt")]
 puzzle = puzzleInput
 
-sample = [
-    "Butterscotch: capacity -1, durability -2, flavor 6, texture 3, calories 8",
-    "Cinnamon: capacity 2, durability 3, flavor -2, texture -1, calories 3"
-]
-
 def combinations(k, n):
   # edge case: if k is 0 or n is 0, return an empty list
   if k == 0 or n == 0:
@@ -36,7 +31,7 @@ def combinations(k, n):
 def turnNegativeIntoZero(n:int):
     return 0 if n < 0 else n
 
-def getBestMixOfIngredients(puzzle):
+def getIngredients(puzzle):
     ingredients = []
     for line in puzzle:
         _, propertiesStr = line.split(":")
@@ -45,17 +40,18 @@ def getBestMixOfIngredients(puzzle):
         for property in propertiesList:
             _, n, q = property.split(" ")
             ingredients[-1][n] = int(q)
+    return ingredients
 
-
+def getBestMixOfIngredients(puzzle):
+    ingredients = getIngredients(puzzle)
     combos = combinations(len(ingredients), 100)
 
-    best_yet = {"score": 0, "combo": (0,0,0,0)}
+    best_yet = {"score": 0, "combo": ()}
     for combo in combos:
         capacities = [ingredient["capacity"] * combo[count] for count, ingredient in enumerate(ingredients)]
         durability = [ingredient["durability"] * combo[count] for count, ingredient in enumerate(ingredients)]
         flavor = [ingredient["flavor"] * combo[count] for count, ingredient in enumerate(ingredients)]
         texture = [ingredient["texture"] * combo[count] for count, ingredient in enumerate(ingredients)]
-        #calories = [ingredient["calories"] * combo[count] for count, ingredient in enumerate(ingredients)]
 
         total = math.prod([turnNegativeIntoZero(sum(capacities)), 
                             turnNegativeIntoZero(sum(durability)), 
@@ -68,19 +64,10 @@ def getBestMixOfIngredients(puzzle):
     return best_yet["score"]
 
 def getBestMixOfIngredientsFor500Calories(puzzle):
-    ingredients = []
-    for line in puzzle:
-        _, propertiesStr = line.split(":")
-        ingredients.append({})
-        propertiesList = propertiesStr.split(",")
-        for property in propertiesList:
-            _, n, q = property.split(" ")
-            ingredients[-1][n] = int(q)
-
-
+    ingredients = getIngredients(puzzle)
     combos = combinations(len(ingredients), 100)
 
-    best_yet = {"score": 0, "combo": (0,0,0,0)}
+    best_yet = {"score": 0, "combo": ()}
     for combo in combos:
         capacities = [ingredient["capacity"] * combo[count] for count, ingredient in enumerate(ingredients)]
         durability = [ingredient["durability"] * combo[count] for count, ingredient in enumerate(ingredients)]
